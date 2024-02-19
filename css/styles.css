@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto-mono);
+    font-size: 13px;
+    font-weight: 400;
+}
+:root{
+    --primary: #EBFB48;
+    --black: #242424;
+    --white: #FFFFFF;
+    --white-8: #F8F8F8;
+    --roboto-mono: "Roboto Mono", monospace;
+    --border-black: solid 1px var(--black);
+}
+.adCarouselContainer{
+    background-color: var(--primary);
+    padding: 8px 0;
+    display: flex;
+    overflow-x: hidden;
+    border-bottom: var(--border-black);
+}
+.adCarouselContainer2{
+    background: none;
+    padding: 32px 0;
+}
+.adCarousel{
+    display: flex;
+    padding: 0 10px;
+    gap: 20px;
+    color: var(--black);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.adCarouselContainer2 .adCarousel{
+    padding: 0 30px;
+    gap: 60px;
+}
+.adCarouselContainer span img{
+    max-width: 100px;
+    max-height: 60px;
+}
