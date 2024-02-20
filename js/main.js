@@ -3,7 +3,7 @@ let styleTag=document.createElement('style');
 document.head.appendChild(styleTag);
 let styleSheet=styleTag.sheet;
 // Create a function to add messages to the carousel container
-function createCarousel(carouselContainer, addMessage, repeatTimes, animationDuration){
+function createCarousel(carouselContainer, addMessage, repeatTimes, animationDuration, elementWidth){
     // Create a variable to save the ad message
     let carouselAdsText=""
     // Create a loop to add a message into carouselAdsText
@@ -17,7 +17,7 @@ function createCarousel(carouselContainer, addMessage, repeatTimes, animationDur
     let carouselAd=document.querySelector(`.${carouselContainer+"Item"}`);
     // Create a time out
     setTimeout(() => {
-        let carouselAdWidth=carouselAd.offsetWidth;
+        let carouselAdWidth=(carouselAd.offsetWidth)*elementWidth;
         // Set an animation for the first message in the carousel container
         let animationName=`${carouselContainer}Animation`;
         let keyframes=`@keyframes ${animationName}{0%{margin-left: 0px;}100%{margin-left: ${0 - carouselAdWidth}px;}}`;
@@ -38,7 +38,19 @@ function getImagesText(imagesArray) {
     return imagesText;
 }
 // Add animation to a carousel using carouselContainerClassName, addMessage, repeatTimes, animationDuration
-createCarousel("adCarouselContainer1", "+++ Open for new projects", 10, 7)
-createCarousel("adCarouselContainer2", getImagesText(carouselImageList), 4, 15)
-createCarousel("adCarouselContainer3", "+++ Finde me on Social Media", 12, 7)
-createCarousel("adCarouselContainer4", "+++ Let's talk", 12, 4)
+createCarousel("adCarouselContainer1", "+++ Open for new projects", 10, 7, 1)
+createCarousel("adCarouselContainer2", getImagesText(carouselImageList), 4, 15, 1)
+createCarousel("adCarouselContainer3", "Selected work", 6, 14, 2)
+createCarousel("adCarouselContainer4", "+++ Finde me on Social Media", 12, 7, 1)
+createCarousel("adCarouselContainer5", "+++ Let's talk", 12, 4, 1)
+
+let cursor=document.querySelector(".cursor");
+
+document.addEventListener("mousemove", function(event) {
+    var x=event.clientX;
+    var y=event.clientY;
+    var scrollTop=document.documentElement.scrollTop;
+    var scrollLeft=document.documentElement.scrollLeft;
+    cursor.style.left=`${x+scrollLeft}px`;
+    cursor.style.top=`${y+scrollTop}px`;
+});
