@@ -55,7 +55,7 @@ button{
     background-color: var(--white);
     padding: 28px;
     display: inline-block;
-    position: inherit;
+    position: relative;
     color: var(--black);
     text-decoration: none;
     text-transform: uppercase;
@@ -76,7 +76,7 @@ button{
 .button-black:hover, .button-yellow:hover, .button-white-2:hover{
     background-color: var(--primary)
 }
-.button-white:hover{
+.button-white:hover, .button-full-black:hover{
     background-color: var(--black);
     color: var(--white);
 }
@@ -87,7 +87,8 @@ button{
     height: 18px;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     overflow-y: hidden;
 }
 .button div span{
@@ -104,7 +105,7 @@ button{
 .button-black:hover div span{
     color: var(--black);
 }
-.button-white:hover div span{
+.button-white:hover div span, .button-full-black:hover div span{
     color: var(--white);
 }
 .button:hover div span:nth-child(1){
@@ -308,19 +309,19 @@ li:hover .submenu{
 .section-h-100{
     height: 100vh;
 }
-.services-container{
+.hidden-scoll-section{
     position: relative;
     justify-content: end;
     overflow-y: scroll;
 }
-.services-container::-webkit-scrollbar {
+.hidden-scoll-section::-webkit-scrollbar {
     width: 12px;
 }
-.services-container::-webkit-scrollbar-track {
+.hidden-scoll-section::-webkit-scrollbar-track {
     background-color: var(--white);
     border-left: var(--border-black);
 }
-.services-container::-webkit-scrollbar-thumb {
+.hidden-scoll-section::-webkit-scrollbar-thumb {
     background-color: var(--black);
 }
 .services-description{
@@ -340,9 +341,12 @@ li:hover .submenu{
 .service-card:last-child{
     border-bottom: none;
 }
-.service-image{
+.service-image, .service-card h3{
     display: flex;
     margin-right: 30px;
+    margin-bottom: 10px;
+    font-family: var(--manrope);
+    font-size: 32px;
 }
 .service-image img{
     width: 60px;
@@ -378,11 +382,11 @@ li:hover .submenu{
     transition: .2s ease-in-out;
     transition-delay: .2s;
 }
-.adCarouselContainer3{
+.bigger-ad-carousel-container{
     background-color: var(--white);
     padding: 30px 0;
 }
-.adCarouselContainer3 .adCarousel{
+.bigger-ad-carousel-container .adCarousel{
     display: flex;
     padding: 0 10px;
     gap: 20px;
@@ -394,7 +398,7 @@ li:hover .submenu{
     text-stroke: var(--stroke-black);
     white-space: nowrap;
 }
-.adCarouselContainer3 .adCarousel:nth-child(2n - 1){
+.bigger-ad-carousel-container .adCarousel:nth-child(2n - 1){
     color: var(--black);
     -webkit-text-stroke: none;
     text-stroke: none;
@@ -487,4 +491,47 @@ li:hover .submenu{
 .gallery-section figure:hover .column-container-info{
     bottom: 0;
     transition: .2s;
+}
+.services-description.your-brand-image-container{
+    padding: 0;
+}
+.your-brand-image-container img{
+    width: 100%;
+    height: 100vh;
+    border-right: var(--border-black);
+    object-fit: cover;
+}
+.your-brand-section .services-list .info-container{
+    border-bottom: var(--border-black);
+}
+.your-brand-section .services-list .info-container img{
+    margin-bottom: 200px;
+}
+.your-brand-section .services-list .info-container h2{
+    width: 65%;
+    font-size: 80px;
+}
+.your-brand-section .services-list{
+    position: relative;
+}
+.your-brand-section .services-list .column-container-info{
+    border-top: none;
+    border-bottom: var(--border-black);
+}
+.your-brand-section .service-card{
+    border-left: none;
+}
+.your-brand-section .service-card-info h3{
+    font-size: 24px;
+}
+.your-brand-section .services-list .button{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+.your-brand-section .services-list ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

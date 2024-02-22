@@ -41,6 +41,7 @@ function getImagesText(imagesArray) {
 createCarousel("adCarouselContainer1", "+++ Open for new projects", 10, 7, 1)
 createCarousel("adCarouselContainer2", getImagesText(carouselImageList), 4, 15, 1)
 createCarousel("adCarouselContainer3", "Selected work", 6, 14, 2)
+createCarousel("adCarouselContainer6", "Process", 6, 10, 2)
 createCarousel("adCarouselContainer4", "+++ Finde me on Social Media", 12, 7, 1)
 createCarousel("adCarouselContainer5", "+++ Let's talk", 12, 4, 1)
 
