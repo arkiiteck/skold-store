@@ -568,3 +568,41 @@ li:hover .submenu{
     background-color: var(--white-2);
     transition: .2s;
 }
+.design h2{
+    margin-top: -50px;
+    width: 65%;
+    font-size: 80px;
+}
+.design p{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto);
+    gap: 40px;
+    font-family: var(--manrope);
+    font-size: 20px;
+    line-height: 30px;
+}
+.design p span{
+    font-family: var(--manrope);
+    font-size: 16px;
+    line-height: 30px;
+}
+.design p.section-title{
+    font-family: var(--roboto-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.design figure{
+    border: none;
+    height: 100vh;
+    overflow: hidden;
+}
+.design figure img{
+    max-height: 100vh;
+}
+.design .info-container{
+    height: 100vh;
+    border-right: var(--border-black);
+    overflow-y: scroll;
+}
