@@ -69,7 +69,7 @@ button{
     text-transform: uppercase;
     transition: .2s;
 }
-.button-black{
+.button-black, .button-full-black{
     background-color: var(--black);
     color: var(--white);
 }
@@ -107,7 +107,7 @@ button{
     white-space: nowrap;
     transition: .2s;
 }
-.button-black div span{
+.button-black div span, .button-full-black div span{
     color: var(--white);
 }
 .button-black:hover div span{
@@ -402,7 +402,7 @@ li:hover .submenu{
     -webkit-text-stroke: none;
     text-stroke: none;
 }
-.cursor{
+.cursor, .cursor2{
     background-color: var(--primary);
     padding: 8px 12px;
     display: inline-block;
@@ -606,6 +606,11 @@ li:hover .submenu{
     border-right: var(--border-black);
     overflow-y: scroll;
 }
+.testimonials .info-container p{
+    font-family: var(--roboto-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+}
 .testimonials-description{
     border-right: var(--border-black);
 }
@@ -688,4 +693,101 @@ li:hover .submenu{
 }
 .customer-info span:nth-child(2){
     font-weight: 200;
+}
+.contact-section{
+    position: relative;
+    border-bottom: var(--border-black);
+}
+.contact-section p{
+    font-family: var(--roboto-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.contact-section h2{
+    width: 70%;
+}
+.contact-section .button{
+    position: absolute;
+    right: 64px;
+    bottom: 64px;
+}
+.latest-news{
+    padding: 50px 64px;
+    align-items: center;
+}
+.latest-news h2{
+    font-family: var(--manrope);
+    font-size: 50px;
+}
+.latest-news a{
+    width: auto;
+    padding: 10px 0;
+    display: inline-block;
+    position: relative;
+    color: var(--black);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.latest-news a:hover .link-line{
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+.news-section a{
+    cursor: none;
+}
+.news-section .social-card figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.news-section .social-card img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: .5s;
+}
+.news-section .social-card:hover img{
+    width: 110%;
+    transition: .5s;
+}
+.news-section .social-card h3{
+    font-family: var(--roboto-mono);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.news-section .social-card p{
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 24px;
+}
+.news-section .social-card-container{
+    padding: 30px;
+}
+.news-section:hover .cursor2{
+    animation: showCursor .5s forwards;
+}
+footer.submenu{
+    display: flex;
+    position: relative;
+    border: none;
+}
+.footer .submenu-image-container{
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.footer .submenu-image-container img{
+    height: 20px;
+}
+.footer .submenu-image-container span{
+    display: flex;
+    flex-direction: column;
+}
+footer.submenu ul{
+    list-style: none;
 }

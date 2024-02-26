@@ -47,6 +47,7 @@ createCarousel("adCarouselContainer7", "Feedback", 6, 14, 2)
 createCarousel("adCarouselContainer5", "+++ Let's talk", 12, 4, 1)
 
 let cursor=document.querySelector(".cursor");
+let cursor2=document.querySelector(".cursor2");
 
 document.addEventListener("mousemove", function(event) {
     var x=event.clientX;
@@ -55,4 +56,6 @@ document.addEventListener("mousemove", function(event) {
     var scrollLeft=document.documentElement.scrollLeft;
     cursor.style.left=`${x+scrollLeft}px`;
     cursor.style.top=`${y+scrollTop}px`;
+    cursor2.style.left=`${x+scrollLeft}px`;
+    cursor2.style.top=`${y+scrollTop}px`;
 });
